@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gowri Umesh</title>
+  <link rel="stylesheet" href="theme.css" />   <!-- 🎨 Design tokens — swap this to change theme -->
+  <link rel="stylesheet" href="style.css" />   <!-- 🧱 Layout & components -->
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+       ══════════════════════════════════════ -->
+  <nav>
+    <div class="nav-logo"></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+       ══════════════════════════════════════ -->
+  <div id="hero">
+    <div class="hero-content">
+      <div class="hero-tag"></div>
+
+      <h1 class="hero-name">
+        Gowri<br>
+        <span>UMESH</span>
+      </h1>
+
+      <p class="hero-title">
+        <span id="typed-text"></span><span class="blink"></span>
+      </p>
+      <!-- <p class="hero-desc">
+        //To Do 
+        Building intelligent machines at the intersection of mechanics, electronics, and software.
+        Designing the automated systems of tomorrow, today.
+      </p> -->
+    </div>
+
+    <!-- Decorative Robot SVG -->
+    <svg class="hero-visual" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="200" cy="200" r="195" stroke="currentColor" stroke-width="1"/>
+      <circle cx="200" cy="200" r="150" stroke="currentColor" stroke-width="0.5" stroke-dasharray="4 8"/>
+      <circle cx="200" cy="200" r="100" stroke="currentColor" stroke-width="0.5"/>
+      <rect x="140" y="110" width="120" height="90" rx="4" fill="currentColor" opacity="0.8"/>
+      <rect x="158" y="132" width="28" height="20" rx="2" fill="var(--color-bg)"/>
+      <rect x="214" y="132" width="28" height="20" rx="2" fill="var(--color-bg)"/>
+      <circle cx="172" cy="142" r="8" fill="var(--color-accent-alt)"/>
+      <circle cx="228" cy="142" r="8" fill="var(--color-accent-alt)"/>
+      <rect x="160" y="170" width="80" height="14" rx="2" fill="var(--color-bg)"/>
+      <rect x="170" y="173" width="14" height="8" rx="1" fill="var(--color-accent-alt)"/>
+      <rect x="193" y="173" width="14" height="8" rx="1" fill="var(--color-accent-alt)"/>
+      <rect x="120" y="210" width="160" height="110" rx="4" fill="currentColor" opacity="0.6"/>
+      <rect x="140" y="225" width="120" height="70" rx="2" fill="var(--color-bg)" opacity="0.7"/>
+      <circle cx="175" cy="255" r="15" stroke="var(--color-accent-alt)" stroke-width="2"/>
+      <circle cx="225" cy="255" r="15" stroke="var(--color-danger)" stroke-width="2"/>
+      <rect x="60"  y="215" width="55" height="20" rx="10" fill="currentColor" opacity="0.5"/>
+      <rect x="285" y="215" width="55" height="20" rx="10" fill="currentColor" opacity="0.5"/>
+      <rect x="145" y="325" width="40" height="50" rx="4" fill="currentColor" opacity="0.5"/>
+      <rect x="215" y="325" width="40" height="50" rx="4" fill="currentColor" opacity="0.5"/>
+      <rect x="178" y="200" width="44" height="12" rx="2" fill="currentColor" opacity="0.7"/>
+    </svg>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       ABOUT
+       ══════════════════════════════════════ -->
+  <section id="about">
+    <div class="section-label"></div>
+    <h2 class="section-title">Who I Am</h2>
+    <!-- <div class="section-divider"></div> -->
+    <!-- <div class="about-grid reveal"> -->
+    <div class="about-text">
+    <p>
+      I’m a <strong>Robotics Engineer</strong> passionate about designing autonomous systems 
+      that bridge the gap between digital intelligence and the physical world.
+      I build systems that don’t just think , they move, adapt, and solve real-world problems.
+    </p>
+
+    <p>
+      Currently, I’m diving deeper into the AI space, exploring 
+      <strong>Generative AI</strong>, 
+      <strong>Large Language Models (LLMs)</strong>, 
+      and intelligent systems that are reshaping how humans interact with technology.
+    </p>
+
+    <p>
+      I’m a continuous learner powered by curiosity (and a slightly unreasonable amount of coffee ☕).
+      If there’s something new to explore, build, or break-then-rebuild-better, I’m in!
+      I’m hands-on by nature , a mix of kinesthetic and visual learning.
+    </p>
+
+  <div class="about-highlights">
+    <p class="highlight-intro">When I'm not building robots, you'll probably find me</p>
+    <ul class="highlight-list">
+      <li>Enjoying stand-up comedy (because debugging is funnier with perspective 😄)</li>
+      <li>Traveling — exploring new places, cultures, and ideas ✈️</li>
+    </ul>
+  </div>
+
+
+
+    <p class="about-footer">
+      Currently based in France 🇫🇷 — building systems, ideas, and the occasional over-engineered weekend project.
+    </p>
+
+        <!-- <a href="resume.pdf" class="btn btn-outline" style="margin-top: 16px;" download>
+          ⬇ Download Full Resume
+        </a> -->
+      </div>
+
+      <!-- <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">20+</div>
+          <div class="stat-label">Projects Shipped</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">8</div>
+          <div class="stat-label">Robots Built</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Publications</div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PROJECTS
+       ══════════════════════════════════════ -->
+  <section id="projects">
+    <div class="section-label"></div>
+    <h2 class="section-title">Selected Work</h2>
+    <div class="section-divider"></div>
+
+    <!-- <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-num">PROJECT_001</div>
+        <div class="project-icon">🦾</div>
+        <div class="project-title">Autonomous Robotic Arm</div>
+        <p class="project-desc">6-DOF industrial arm with real-time path planning and force-torque sensing for collaborative pick-and-place operations.</p>
+        <div class="project-tags">
+          <span class="tag">ROS2</span>
+          <span class="tag">MoveIt</span>
+          <span class="tag">C++</span>
+          <span class="tag">URDF</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">PROJECT_002</div>
+        <div class="project-icon">🚗</div>
+        <div class="project-title">Autonomous Ground Vehicle</div>
+        <p class="project-desc">Self-driving platform using LiDAR SLAM, GPS fusion, and deep learning-based obstacle avoidance for outdoor navigation.</p>
+        <div class="project-tags">
+          <span class="tag">SLAM</span>
+          <span class="tag">LiDAR</span>
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">PROJECT_003</div>
+        <div class="project-icon">👁️</div>
+        <div class="project-title">Computer Vision Pipeline</div>
+        <p class="project-desc">Real-time object detection and pose estimation system for robotic grasping using stereo cameras and depth sensors.</p>
+        <div class="project-tags">
+          <span class="tag">OpenCV</span>
+          <span class="tag">YOLO</span>
+          <span class="tag">PCL</span>
+          <span class="tag">CUDA</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">PROJECT_004</div>
+        <div class="project-icon">🦿</div>
+        <div class="project-title">Prosthetic Hand Controller</div>
+        <p class="project-desc">EMG-based myoelectric controller for a multi-fingered prosthetic hand with haptic feedback and gesture recognition.</p>
+        <div class="project-tags">
+          <span class="tag">EMG</span>
+          <span class="tag">Arduino</span>
+          <span class="tag">ML</span>
+          <span class="tag">Embedded C</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">PROJECT_005</div>
+        <div class="project-icon">🚁</div>
+        <div class="project-title">Drone Swarm Coordination</div>
+        <p class="project-desc">Decentralized multi-agent control system enabling formation flight and cooperative task execution for UAV swarms.</p>
+        <div class="project-tags">
+          <span class="tag">PX4</span>
+          <span class="tag">MAVLink</span>
+          <span class="tag">ROS2</span>
+          <span class="tag">Python</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">PROJECT_006</div>
+        <div class="project-icon">🤖</div>
+        <div class="project-title">Humanoid Walking Gait</div>
+        <p class="project-desc">Reinforcement-learning-based bipedal locomotion controller trained in simulation and transferred to a real bipedal platform.</p>
+        <div class="project-tags">
+          <span class="tag">RL</span>
+          <span class="tag">Isaac Gym</span>
+          <span class="tag">PyBullet</span>
+          <span class="tag">PyTorch</span>
+        </div>
+      </div> -->
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SKILLS
+       ══════════════════════════════════════ -->
+  <section id="skills">
+    <div class="section-label"></div>
+    <h2 class="section-title">Tech Stack</h2>
+    <div class="section-divider"></div>
+
+    <div class="skills-container reveal">
+
+      <div class="skill-group">
+        <div class="skill-group-title">// Robotics & Control</div>
+        <div class="skill-item">
+          <span class="skill-icon">🤖</span>
+          <div class="skill-name"><span>ROS / ROS2</span></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-icon">🧭</span>
+          <div class="skill-name"><span>Navigation2</span></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-icon">🔧</span>
+          <div class="skill-name"><span>Gazebo / Isaac Sim</span></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">// Programming</div>
+        <div class="skill-item">
+          <span class="skill-icon">🔧</span>
+          <div class="skill-name"><span>Python</span></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-icon">⚙️</span>
+          <div class="skill-name"><span>C / C++</span></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-icon">📊</span>
+          <div class="skill-name"><span>MATLAB / Simulink</span></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">// AI & Perception</div>
+        <div class="skill-item">
+          <span class="skill-icon">👁️</span>
+          <div class="skill-name"><span>Computer Vision</span></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-icon">🧭</span>
+          <div class="skill-name"><span>SLAM / Localization</span></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-icon">🧠</span>
+          <div class="skill-name"><span>Deep Learning</span></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">// Hardware</div>
+
+        <div class="skill-item">
+          <span class="skill-icon">🔧</span>
+          <div class="skill-name"><span>Actuators / Sensors</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-icon">🧰</span>
+          <div class="skill-name"><span>Arduino</span></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-icon">⚡</span>
+          <div class="skill-name"><span>Nvidia Jetson</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       Certifications
+       ══════════════════════════════════════ --><section id="certifications" class="wrap">
+  <div class="sec-label reveal">03 — Credentials</div>
+  <h2 class="sec-title reveal"><span>Certifications</span></h2>
+  <div class="cert-grid">
+
+    <div class="cert-card reveal">
+      <div class="cert-dot">✓</div>
+      <div class="c-ico">🤖</div>
+      <div class="c-name">Generative AI for Software Development</div>
+      <div class="c-org">Coursera Specialization· deeplearning.ai</div>
+      <div class="c-date">February 2026 · No Expiry</div>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-dot">✓</div>
+      <div class="c-ico">🧠</div>
+      <div class="c-name">Generative AI Leader</div>
+      <div class="c-org">Coursera Specialization · Google Cloud</div>
+      <div class="c-date">September 2025 · No Expiry</div>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-dot">✓</div>
+      <div class="c-ico">🏎️</div>
+      <div class="c-name">Visual Perception for Self-Driving Cars</div>
+      <div class="c-org">Coursera Specialization · University of Toronto</div>
+      <div class="c-date">April 2023 · No Expiry</div>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-dot">✓</div>
+      <div class="c-ico">☁️</div>
+      <div class="c-name">IT Automation with Python</div>
+      <div class="c-org">Coursera Specialization · Google</div>
+      <div class="c-date">February 2023 · No Expiry</div>
+    </div>
+
+
+
+    <!-- <div class="cert-card reveal">
+      <div class="cert-dot">✓</div>
+      <div class="c-ico">👁️</div>
+      <div class="c-name">Computer Vision Engineer</div>
+      <div class="c-org">OpenCV University</div>
+      <div class="c-date">April 2021 · No Expiry</div>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-dot">✓</div>
+      <div class="c-ico">⚙️</div>
+      <div class="c-name">ROS2 for Beginners &amp; Advanced</div>
+      <div class="c-org">The Construct · Udemy</div>
+      <div class="c-date">November 2020 · No Expiry</div>
+    </div> -->
+
+  </div>
+</section>
+
+  <!-- ══════════════════════════════════════
+       Blog
+       ══════════════════════════════════════ -->
+  <section id="blog">
+    <div class="section-label"></div>
+    <h2 class="section-title">Blog </h2>
+    <div class="section-divider"></div>
+
+    </div>  
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT
+       ══════════════════════════════════════ -->
+  <section id="contact">
+    <div class="section-label"></div>
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="section-divider"></div>
+
+    <!-- <div class="contact-wrapper reveal"> -->
+      <div class="contact-info">
+        <p>
+          Interested in collaborating on a project, discussing research opportunities,
+          or just want to talking shop? I'd love to connect! My inbox is always open.
+        </p>
+        <div class="contact-links">
+          <a href="#" class="contact-link copy-email" data-email="mailgowriumesh@gmail.com" role="button" aria-label="Copy email address">
+            <span class="contact-link-icon">✉</span> mailgowriumesh@gmail.com
+          </a>
+          <a href="https://github.com/GowriUmesh" class="contact-link" target="_blank">
+            <span class="contact-link-icon">⌥</span> github.com/GowriUmesh
+          </a>
+          <a href="https://linkedin.com/in/gowriumesh" class="contact-link" target="_blank">
+            <span class="contact-link-icon">▣</span> linkedin.com/in/gowriumesh
+          </a>
+        </div>
+      </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════ -->
+  <footer>
+    <p> Gowri Umesh &nbsp;|&nbsp; © 2025 </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

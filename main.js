@@ -60,7 +60,12 @@ const barObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.skill-fill').forEach(bar => barObserver.observe(bar));
 
-
+/* Create a link for certificates */
+document.addEventListener('click', (e) => {
+  const card = e.target.closest('[data-link]');
+  if (!card) return;
+  window.open(card.dataset.link, '_blank');
+});
 /* ── Copy Email to Clipboard ── */
 document.addEventListener('click', (e) => {
   const btn = e.target.closest && e.target.closest('.copy-email');

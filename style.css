@@ -96,14 +96,81 @@ nav {
 #hero {
   position: relative;
   min-height: 100vh;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: calc(var(--nav-height) + 60px) var(--space-xl) var(--space-2xl);
+  gap: var(--space-xl);
+  padding: calc(var(--nav-height) + 40px) var(--space-xl) var(--space-2xl);
   z-index: 1;
   overflow: hidden;
 }
 
-.hero-content { max-width: 700px; }
+.hero-content {
+  z-index: 2;
+  min-width: 0;
+}
+
+/* Right side: robot + overlay stacked */
+.hero-right {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 700px;
+  justify-self: center;
+}
+
+/* About overlay sits on top of the robot — semi-transparent so robot shows through */
+.hero-about-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-lg);
+  background: rgba(8, 12, 16, 0.52);
+  backdrop-filter: blur(2px);
+  border: var(--border-width) solid rgba(0, 229, 255, 0.2);
+  border-radius: var(--radius-lg);
+  z-index: 3;
+  animation: fadeInUp 0.6s 0.5s ease both;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.hero-about-tag {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-accent);
+  letter-spacing: var(--letter-spacing-wider);
+  text-shadow: var(--glow-accent);
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+}
+
+.hero-about-overlay p {
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  line-height: 1.75;
+  margin-bottom: var(--space-sm);
+}
+
+.hero-about-overlay p strong {
+  color: var(--color-accent);
+}
+
+.hero-about-more {
+  margin-top: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-accent-alt);
+  text-decoration: none;
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  text-shadow: var(--glow-accent-alt);
+  transition: letter-spacing var(--transition-fast);
+  align-self: flex-start;
+}
+.hero-about-more:hover { letter-spacing: 4px; }
 
 .hero-tag {
   font-family: var(--font-mono);
@@ -213,14 +280,14 @@ nav {
    ============================================================ */
 .hero-visual {
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 480px;
-  height: 480px;
-  opacity: 0.15;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--color-accent);
+  opacity: 0.35;
   pointer-events: none;
   animation: float 6s ease-in-out infinite;
+  z-index: 1;
 }
 
 /* ============================================================
@@ -745,8 +812,8 @@ footer {
 @keyframes blink { 50% { opacity: 0; } }
 
 @keyframes float {
-  0%, 100% { transform: translateY(-50%) rotate(0deg); }
-  50%       { transform: translateY(-53%) rotate(2deg); }
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50%       { transform: rotate(2deg) scale(1.02); }
 }
 
 /* Scroll reveal */
@@ -760,15 +827,25 @@ footer {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+@media (max-width: 900px) {
+  #hero {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: var(--space-lg);
+    padding: calc(var(--nav-height) + 40px) var(--space-md) var(--space-2xl);
+  }
+  .hero-right {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+}
+
 @media (max-width: 768px) {
   nav { padding: 0 var(--space-md); }
   .nav-links { gap: var(--space-md); }
-
   section { padding: 80px var(--space-md); }
-  #hero { padding: calc(var(--nav-height) + 40px) var(--space-md) var(--space-2xl); }
 
   .about-grid,
   .contact-wrapper { grid-template-columns: 1fr; }
-
-  .hero-visual { display: none; }
 }

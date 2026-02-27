@@ -39,15 +39,12 @@
       <p class="hero-title">
         <span id="typed-text"></span><span class="blink"></span>
       </p>
-      <!-- <p class="hero-desc">
-        //To Do 
-        Building intelligent machines at the intersection of mechanics, electronics, and software.
-        Designing the automated systems of tomorrow, today.
-      </p> -->
     </div>
 
-    <!-- Decorative Robot SVG -->
-    <svg class="hero-visual" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Right panel: robot SVG + about overlay -->
+    <div class="hero-right">
+      <!-- Decorative Robot SVG -->
+      <svg class="hero-visual" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="200" cy="200" r="195" stroke="currentColor" stroke-width="1"/>
       <circle cx="200" cy="200" r="150" stroke="currentColor" stroke-width="0.5" stroke-dasharray="4 8"/>
       <circle cx="200" cy="200" r="100" stroke="currentColor" stroke-width="0.5"/>
@@ -69,6 +66,21 @@
       <rect x="215" y="325" width="40" height="50" rx="4" fill="currentColor" opacity="0.5"/>
       <rect x="178" y="200" width="44" height="12" rx="2" fill="currentColor" opacity="0.7"/>
     </svg>
+
+      <!-- About snippet overlaid on robot -->
+      <div class="hero-about-overlay">
+        <div class="hero-about-tag">// about.me</div>
+        <p>
+          I'm a <strong>Robotics Engineer</strong> passionate about designing autonomous systems 
+          that bridge the gap between digital intelligence and the physical world.
+        </p>
+        <p>
+          Currently exploring <strong>Generative AI, Physical AI</strong> and <strong>LLMs</strong>,
+          building systems that don't just think, they move, adapt, and solve real-world problems.
+        </p>
+        <a href="#about" class="hero-about-more">Read more →</a>
+      </div>
+    </div>
   </div>
 
   <!-- ══════════════════════════════════════
@@ -110,9 +122,15 @@
       Currently based in France 🇫🇷 , building systems, ideas, and the occasional over-engineered weekend project.
     </p>
 
-        <!-- <a href="resume.pdf" class="btn btn-outline" style="margin-top: 16px;" download>
-          ⬇ Download Full Resume
-        </a> -->
+        <!-- CV download links (English & French) -->
+        <div class="cv-buttons" style="margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap;">
+          <a href="docs/GowriUmesh_CV_EN.pdf" class="btn btn-outline" download>
+            ⬇ Download Full CV (EN)
+          </a>
+          <a href="docs/GowriUmesh_CV_FR.pdf" class="btn btn-outline" download>
+            ⬇ Télécharger CV complet (FR)
+          </a>
+        </div>
       </div>
 
       <!-- <div class="stats-grid">
@@ -401,7 +419,7 @@
         </p>
         <div class="contact-links">
           <a href="#" class="contact-link copy-email" data-email="mailgowriumesh@gmail.com" role="button" aria-label="Copy email address">
-            <span class="contact-link-icon">✉</span> mailgowriumesh@gmail.com
+            <span class="contact-link-icon">✉</span> <span class="__cf_email__" data-cfemail="2d404c44414a425a5f445840485e456d4a404c4441034e4240">[email&#160;protected]</span>
           </a>
           <a href="https://github.com/GowriUmesh" class="contact-link" target="_blank">
             <span class="contact-link-icon">⌥</span> github.com/GowriUmesh

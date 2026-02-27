@@ -108,15 +108,15 @@ nav {
 .hero-content {
   z-index: 2;
   min-width: 0;
+  align-self: center;
 }
 
-/* Right side: robot + overlay stacked */
+/* Right side: robot + overlay — stretches to fill the grid cell */
 .hero-right {
   position: relative;
+  align-self: stretch;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  max-width: 700px;
-  justify-self: center;
+  min-height: 400px;
 }
 
 /* About overlay sits on top of the robot — semi-transparent so robot shows through */
@@ -837,7 +837,7 @@ footer {
   .hero-right {
     width: 100%;
     max-width: 100%;
-    aspect-ratio: 4 / 3;
+    height: clamp(260px, 55vw, 380px);
   }
 }
 
